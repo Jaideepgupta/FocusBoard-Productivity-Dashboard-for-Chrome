@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FocusBoard</title>
+  <link rel="stylesheet" href="analytics.css">
+</head>
+<body>
+  
+  <div id="main-dashboard">
+    
+    <!-- Top Right Task Widget -->
+    <div id="task-widget" class="glass-panel">
+      <h3>Tasks</h3>
+      <input type="text" id="new-task-input" class="task-input-sm" placeholder="Add a new task...">
+      <ul id="task-list">
+        <!-- Tasks -->
+      </ul>
+    </div>
+
+    <!-- Centerpiece -->
+    <div id="clock-container">
+      <h1 id="time-display">--:--</h1>
+      <h2 id="greeting-display">Good day, Friend</h2>
+      
+      <div class="focus-input-container">
+        <h3>What is your main focus today?</h3>
+        <input type="text" id="main-focus-input" placeholder="Enter your focus...">
+      </div>
+    </div>
+
+    <!-- Bottom Controls -->
+    <div class="bottom-controls">
+      <!-- Focus Mode Toggle -->
+      <div id="focus-toggle-btn" class="toggle-switch">
+        <div class="indicator"></div>
+        <span id="focus-text">FOCUS MODE: OFF</span>
+      </div>
+      
+      <!-- Analytics Button -->
+      <div id="nav-analytics" class="icon-btn" title="View Analytics">
+        📊
+      </div>
+    </div>
+  </div>
+  
+  <!-- Overlay Analytics Panel -->
+  <div id="analytics-panel" hidden>
+    <div class="analytics-header">
+      <h1 style="margin:0; font-size: 24px;">Analytics Dashboard</h1>
+      <div id="nav-dashboard" class="icon-btn" title="Close Analytics">✖</div>
+    </div>
+    
+    <div id="charts-container">
+      <!-- charts injected here -->
+    </div>
+    
+    <div style="margin-top: 40px; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
+      <button id="view-logs-btn" style="background: transparent; border: 1px solid rgba(255,255,255,0.3); padding: 6px 12px; border-radius: 4px; color: #cbd5e1; cursor: pointer; margin-right: 10px; font-size: 12px;">Print Logs to Console</button>
+      <button id="clear-data-btn" style="background: transparent; border: 1px solid #fc8181; padding: 6px 12px; border-radius: 4px; color: #fc8181; cursor: pointer; font-size: 12px;">Reset All Data</button>
+    </div>
+  </div>
+  
+  <script src="chart.umd.min.js"></script>
+  <script type="module" src="newtab.js"></script>
+</body>
+</html>
